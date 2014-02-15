@@ -3,7 +3,7 @@ layout: post
 title: "An NUnit wrapper for WebAssert"
 date: 2010-04-18 +1100
 comments: true
-categories: [dotnet, nunit, tdd, webassert]
+categories: ['dotnet', 'nunit', 'tdd', 'webassert']
 ---
 
 Early in April 2010 [Damian Edwards released](http://twitter.com/DamianEdwards/status/11446393326) his [WebAssert](http://webassert.codeplex.com/) library onto [CodePlex](http://www.codeplex.com/). The library allows for writing assertion unit tests so that HTML and CSS can be validated either by submitting to the [W3C validator](http://validator.w3.org/) or to a custom validation service. The release is made up of 3 libraries; the WebAssert core, a unit test project for the core project and a wrapper around the core for use in projects that use the [MS unit testing framework](http://msdn.microsoft.com/en-us/library/ms243147(VS.80).aspx).

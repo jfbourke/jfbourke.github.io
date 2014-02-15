@@ -3,7 +3,7 @@ layout: post
 title: "Inheriting From RegularExpressionAttribute And Client Side Validation"
 date: 2010-11-24 +1100
 comments: true
-categories: [dotnet, DataAnnotations, model, MVC, RegularExpressionAttribute, validation]
+categories: ['dotnet', 'DataAnnotations', 'model', 'MVC', 'RegularExpressionAttribute', 'validation']
 ---
 
 

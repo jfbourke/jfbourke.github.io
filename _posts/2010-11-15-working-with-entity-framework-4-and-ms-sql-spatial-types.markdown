@@ -3,7 +3,7 @@ layout: post
 title: "Working with Entity Framework 4 and MS SQL Spatial Types"
 date: 2010-11-15 +1100
 comments: true
-categories: [dotnet, ef4, entity framework, spatial, sql]
+categories: ['dotnet', 'ef4', 'entity framework', 'spatial', 'sql']
 ---
 
 I’ve been involved in a project at work recently that required the ability to maintain records that contained spatial information. The ORM of choice for the project was Entity Framework 4. During the build I ran into several problems. In this post I’ll detail what barriers I found, the options available to work around them and the solution I chose.
