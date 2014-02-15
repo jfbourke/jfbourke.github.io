@@ -2,8 +2,8 @@
 {% capture has_date %}{{ date | size }}{% endcapture %}
 
 {% if has_date != '0' %}
-	{% assign monthstart = {{ date | date: "%b" }} %}
-	{% assign monthend = {{ date | date: "%B" | remove: monthstart }} %}
+	{% capture monthstart %}{{ date | date: "%b" }}{% endcapture %}
+	{% capture monthend %}{{ date | date: "%B" | remove: monthstart }}{% endcapture %}
 	{% capture time %}
 	<!--
 		Note: The date should be formatted exactly as it's shown below. In particular, the
