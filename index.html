@@ -1,2 +1,15 @@
-<!doctype html>
-<html><body><h1>Hi!</h1><p>Just playing...for now</p></body></html>
+---
+layout: default
+---
+
+{% assign index = true %}
+<div itemscope itemtype="http://schema.org/Blog">
+{% for post in paginator.posts %}
+{% unless post.redirect %}
+{% assign content = post.content %}
+    <article class="is-post is-post-excerpt" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        {% include article.html %}
+    </article>
+{% endunless %}
+{% endfor %}
+</div>

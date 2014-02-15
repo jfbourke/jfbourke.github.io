@@ -1,0 +1,20 @@
+{% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
+{% capture has_date %}{{ date | size }}{% endcapture %}
+
+{% if has_date != '0' %}
+	{% assign monthstart = {{ date | date: "%b" }} %}
+	{% assign monthend = {{ date | date: "%B" | remove: monthstart }} %}
+	{% capture time %}
+	<!--
+		Note: The date should be formatted exactly as it's shown below. In particular, the
+		"least significant" characters of the month should be encapsulated in a <span>
+		element to denote what gets dropped in 1200px mode (eg. the "uary" in "January").
+		Oh, and if you don't need a date for a particular page or post you can simply delete
+		the entire "date" element.
+		
+	-->
+	<time datetime="{{ date | datetime | date_to_xmlschema }}" {% if updated %}data-updated="true"{% endif %} itemprop="datePublished">
+		<span class="month">{{ monthstart }}<span>{{ monthend }}</span></span> <span class="day">{{ date | date: "%e" }}</span><span class="year">{{ date | date: ", %Y" }}</span>
+	</time>	
+	{% endcapture %}
+{% endif %}

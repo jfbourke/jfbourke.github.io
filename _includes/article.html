@@ -1,0 +1,15 @@
+<header>
+	<!--
+		Note: Titles and bylines will wrap automatically when necessary, so don't worry
+		if they get too long. You can also remove the "byline" span entirely if you don't
+		need a byline.
+	-->
+{% if index %}
+	<h2 class="title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h2>
+{% else %}
+	<h2 class="title" itemprop="name">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h2>
+{% endif %}
+	<span class="byline">A free, fully responsive HTML5 site template by AJ for HTML5 UP</span>
+</header>
+{% include post/meta.html %}
+<div itemprop="articleBody">{{ content }}</div>

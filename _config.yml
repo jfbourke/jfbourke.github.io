@@ -1,0 +1,37 @@
+#
+# Blog Settings
+#
+author: Jonathan Bourke
+description: This is my blog. There are many like it, but this one is mine.
+url: http://bourke.net.nz
+title: Jonathan Bourke
+subtitle: This is my blog. There are many like it, but this one is mine.
+#gravatar_url: 
+#subscribe_rss: 
+
+# Github repositories
+github_user: jfbourke
+github_repo_url: https://github.com/jfbourke/bourke.net.nz/
+
+# Twitter
+twitter_user: jfbourke
+twitter_tweet_button: true
+
+# Disqus Comments
+#disqus_short_name: jfbourke
+#disqus_show_comment_count: true
+
+# Google Analytics
+google_analytics_tracking_id: UA-15912626-1
+
+
+#
+# Jekyll Settings
+#
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
+permalink: /archive/:year/:month/:day/:title/
+paginate: 20
+paginate_path: "page/:num"
+category_dir: categories
