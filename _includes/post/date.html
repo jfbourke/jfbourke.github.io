@@ -13,7 +13,7 @@
 		the entire "date" element.
 		
 	-->
-	<time datetime="{{ date | datetime | date_to_xmlschema }}" {% if updated %}data-updated="true"{% endif %} itemprop="datePublished">
+	<time class="date" datetime="{{ date | datetime | date_to_xmlschema }}" {% if updated %}data-updated="true"{% endif %} itemprop="datePublished">
 		<span class="month">{{ monthstart }}<span>{{ monthend }}</span></span> <span class="day">{{ date | date: "%e" }}</span><span class="year">{{ date | date: ", %Y" }}</span>
 	</time>	
 	{% endcapture %}
