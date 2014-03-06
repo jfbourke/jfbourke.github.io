@@ -1,4 +1,3 @@
-
 (function ($) {
 	"use strict";
 	
@@ -10,10 +9,4 @@
 		
 		});
 	});
-	
-	hljs.configure({
-		languages: ['cs']
-	});
-	
-	hljs.initHighlightingOnLoad();
 }(jQuery));
