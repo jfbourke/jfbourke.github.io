@@ -160,13 +160,17 @@ footer#site-footer a:hover, footer#site-footer a:focus {
 
 main {
 	background-color: #fff;
-    color: #3A4145;
+	color: #3A4145;
 	padding: 40px;
 	margin-top: 110px;
 }
 
 article.post header h2 {
 	margin: 0;
+}
+
+article.post header h2 a {
+	text-decoration: none;
 }
 
 article.post div.post-meta {
