@@ -3,7 +3,7 @@
 #
 author: Jonathan Bourke
 description: This is my blog. There are many like it, but this one is mine.
-url: http://jfbourke.github.io
+url: http://bourke.net.nz
 title: Jonathan Bourke
 subtitle: This is my blog. There are many like it, but this one is mine.
 #gravatar_url: 
@@ -18,8 +18,8 @@ twitter_user: jfbourke
 twitter_tweet_button: true
 
 # Disqus Comments
-#disqus_short_name: jfbourke
-#disqus_show_comment_count: true
+disqus_short_name: jfbourke
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-15912626-1
