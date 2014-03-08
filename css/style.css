@@ -280,3 +280,9 @@ pre {
 .fa-github:before {
   content: "\f09b";
 }
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+.fa-stack-overflow:before {
+  content: "\f16c";
+}
