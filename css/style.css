@@ -271,8 +271,14 @@ pre {
 .fa {
   font: 1.3em FontAwesome;
 }
-.fa-twitter span {
-	text-indent: -9999px;
+.hidden, .fa>span
+{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
 }
 .fa-twitter:before {
   content: "\f099";
