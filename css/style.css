@@ -270,6 +270,7 @@ pre {
 
 .fa {
   font: 1.3em FontAwesome;
+  text-decoration: none;
 }
 .hidden, .fa>span
 {
