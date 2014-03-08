@@ -56,4 +56,4 @@ When run with NUnit GUI all tests validated:
 
 One limitation I found was getting enough information about what didn’t validate. Using Fiddler I found that there are no headers in the response describing what the errors or warnings are. So maybe there is a case for adding an HTML parser to the core library so that the validation response can be pulled apart and added to the exception thrown by the Fail method.
 
-EDIT: Damian commented on this original version of this blog, alas the comments were lost during the transition to its current state. What he said was that future project updates will allow for the use of the SOAP API for the W3C validation service meaning that more information about errors in validation will appear in exceptions from test failures. Nice.
+EDIT: Damian's comment below shows that future project updates will allow for the use of the SOAP API for the W3C validation service meaning that more information about errors in validation will appear in exceptions from test failures. Nice.
