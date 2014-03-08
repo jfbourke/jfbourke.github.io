@@ -9,7 +9,7 @@
 		<li><a href="#" class="fa fa-twitter">64</a></li>
 		<li><a href="#" class="fa fa-facebook">128</a></li>
 	</ul>-->
-	{% if post.categories.length > 0 %}
+	{% if page.categories.length > 0 or post.categories.length > 0 %}
 	<span class="tags">{% include post/categories.html %}</span>
 	{% endif %}
 	<span class="edit">{% include post/edit.html %}</span>
