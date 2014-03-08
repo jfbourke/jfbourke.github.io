@@ -149,6 +149,11 @@ header#site-header h1, header#site-header p {
 	margin: 0;
 }
 
+header#site-header h1 a {
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
 
 footer#site-footer {
 	padding: 20px;
