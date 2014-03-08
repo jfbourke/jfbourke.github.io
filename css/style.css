@@ -16,6 +16,10 @@
 /* ==========================================================================
    0. Includes - Ground zero
    ========================================================================== */
+   
+@import url(normalize.css);
+@import url(pygments.css);
+
 @font-face {
     font-family: 'FontAwesome';
     src: url("/css/font/fontawesome-webfont.eot");
@@ -23,9 +27,6 @@
     font-weight: normal;
     font-style: normal;
 }
-   
-@import url(normalize.css);
-@import url(pygments.css);
 
 
 /* ==========================================================================
