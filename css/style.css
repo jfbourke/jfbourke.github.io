@@ -266,3 +266,17 @@ pre {
     background: #F7FAFB;
     border-radius: 3px;
 }
+
+
+.fa-twitter span {
+	text-indent: -9999px;
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-facebook:before {
+  content: "\f09a";
+}
+.fa-github:before {
+  content: "\f09b";
+}
