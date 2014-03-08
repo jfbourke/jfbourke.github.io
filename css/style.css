@@ -16,6 +16,13 @@
 /* ==========================================================================
    0. Includes - Ground zero
    ========================================================================== */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("/font/fontawesome-webfont.eot");
+    src: url("/font/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),url("/font/fontawesome-webfont.woff") format("woff"),url("/font/fontawesome-webfont.ttf") format("truetype"),url("/font/fontawesome-webfont.svgz#FontAwesomeRegular") format("svg"),url("/font/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
    
 @import url(normalize.css);
 @import url(pygments.css);
@@ -128,9 +135,10 @@ ul ol, ol ul {
 header#site-header {
 	background-color: #fff;
 	padding: 20px;
-	width: 100%;
+	width: 250px;
 	position: fixed;
 	top: 0;
+	left: 0;
 }
 
 .is-sticky {
@@ -163,7 +171,7 @@ main {
 	background-color: #fff;
 	color: #3A4145;
 	padding: 40px;
-	margin-top: 110px;
+	max-width: 800px;
 }
 
 article.post header h2 {
@@ -183,6 +191,56 @@ article.post div.post-meta {
 article.post div.post-meta p {
 	margin: 0;
 }
+
+
+article.post div.post-meta {
+    margin-left: 4px;
+    color: #999;
+}
+article.post div.post-meta a {
+    color: #999;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+article.post div.post-meta a:hover { color: #666 }
+
+article.post div.post-meta .date,
+article.post div.post-meta .tags,
+article.post div.post-meta .comments,
+article.post div.post-meta .edit { padding-right: 10px }
+
+article.post div.post-meta .date:before,
+article.post div.post-meta .tags:before,
+article.post div.post-meta .comments:before,
+article.post div.post-meta .edit:before {
+    color: #ccc;
+    font: 1.3em FontAwesome;
+    left: 0;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 800px) { 
+    article.post div.post-meta .date,
+    article.post div.post-meta .tags,
+    article.post div.post-meta .comments,
+    article.post div.post-meta .edit {
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom: 1;
+        *display: inline;
+        margin-right: 30px;
+    }
+}
+
+article.post div.post-meta .date:before { content: "\f073" }
+article.post div.post-meta .tags:before { content: "\f02c" }
+article.post div.post-meta .comments:before { content: "\f075" }
+article.post div.post-meta .edit:before { content: "\f044" }
 
 article.post div.post-body {
 	padding: 0 10px;
