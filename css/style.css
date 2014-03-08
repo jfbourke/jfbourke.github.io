@@ -171,6 +171,9 @@ main {
 	color: #3A4145;
 	padding: 40px;
 	margin-top: 110px;
+}
+
+article.post {
 	max-width: 800px;
 }
 
