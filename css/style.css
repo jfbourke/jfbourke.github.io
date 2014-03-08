@@ -135,10 +135,9 @@ ul ol, ol ul {
 header#site-header {
 	background-color: #fff;
 	padding: 20px;
-	width: 250px;
+	width: 100%;
 	position: fixed;
 	top: 0;
-	left: 0;
 }
 
 .is-sticky {
@@ -171,6 +170,7 @@ main {
 	background-color: #fff;
 	color: #3A4145;
 	padding: 40px;
+	margin-top: 110px;
 	max-width: 800px;
 }
 
