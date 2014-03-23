@@ -13,6 +13,10 @@
 	margin-top: 30px;
 }
 
+.sidebar-social a {
+	margin-right: 5px;
+}
+
 footer#site-footer {
 	padding: 20px;
 	font-size: .6rem;
