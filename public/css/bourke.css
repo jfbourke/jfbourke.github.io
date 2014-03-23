@@ -1,3 +1,15 @@
+
+
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("/public/css/font/fontawesome-webfont.eot");
+    src: url("/public/css/font/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),url("/public/css/font/fontawesome-webfont.woff") format("woff"),url("/public/css/font/fontawesome-webfont.ttf") format("truetype"),url("/public/css/font/fontawesome-webfont.svgz#FontAwesomeRegular") format("svg"),url("/public/css/font/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 div.post-meta {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.25rem;
