@@ -9,6 +9,10 @@
     font-style: normal;
 }
 
+.sidebar-social {
+	margin-top: 30px;
+}
+
 footer#site-footer {
 	padding: 20px;
 	font-size: .6rem;
