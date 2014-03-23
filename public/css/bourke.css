@@ -1,0 +1,87 @@
+div.post-meta {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.25rem;
+	color: #9EABB3;
+}
+
+div.post-meta p {
+	margin: 0;
+}
+
+div.post-meta {
+    margin-left: 4px;
+    color: #999;
+}
+div.post-meta a {
+    color: #999;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+div.post-meta a:hover { color: #666 }
+
+div.post-meta .date,
+div.post-meta .tags,
+div.post-meta .comments,
+div.post-meta .edit { padding-right: 10px }
+
+div.post-meta .date:before,
+div.post-meta .tags:before,
+div.post-meta .comments:before,
+div.post-meta .edit:before {
+    color: #ccc;
+    font: 1.3em FontAwesome;
+    left: 0;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 800px) { 
+    div.post-meta .date,
+    div.post-meta .tags,
+    div.post-meta .comments,
+    div.post-meta .edit {
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom: 1;
+        *display: inline;
+        margin-right: 30px;
+    }
+}
+
+div.post-meta .date:before { content: "\f073" }
+div.post-meta .tags:before { content: "\f02c" }
+div.post-meta .comments:before { content: "\f075" }
+div.post-meta .edit:before { content: "\f044" }
+
+
+
+
+.fa {
+  font: 1.3em FontAwesome;
+  text-decoration: none;
+}
+.hidden, .fa>span
+{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-github:before {
+  content: "\f09b";
+}
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+.fa-stack-overflow:before {
+  content: "\f16c";
+}
