@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Fun with MS SQL"
 date: 2014-03-10 +1100
 comments: true
