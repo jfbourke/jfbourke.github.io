@@ -11,7 +11,8 @@
 
 footer#site-footer {
 	padding: 20px;
-	font-size: 1.25rem;
+	font-size: .6rem;
+	text-align: center;
 }
 
 footer#site-footer p {
