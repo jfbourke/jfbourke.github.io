@@ -26,9 +26,12 @@
         {% endif %}
       {% endfor %}
 
-      <li class="sidebar-nav-item"><a href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a></li>
-      <li class="sidebar-nav-item"><a href="{{ site.github.repo }}">GitHub project</a></li>
-      <li class="sidebar-nav-item">Currently v{{ site.version }}</li>
+	  <li class="sidebar-nav-item">
+	    <a class="fa fa-twitter" href="https://twitter.com/jfbourke"><span>twitter</span></a> | 
+		<a class="fa fa-linkedin" href="https://www.linkedin.com/in/jfbourke"><span>linkedin</span></a> | 
+		<a class="fa fa-github" href="https://github.com/jfbourke"><span>github</span></a> |
+		<a class="fa fa-stack-overflow" href="http://stackoverflow.com/users/209136/jonathan"><span>stackoverflow</span></a>
+	  </li>
     </ul>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
