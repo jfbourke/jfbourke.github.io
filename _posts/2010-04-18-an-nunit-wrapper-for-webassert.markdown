@@ -52,7 +52,7 @@ namespace WebAssertDemoNUnitTests
 
 When run with NUnit GUI all tests validated:
 
-[![WebAssert Demo NUnit Tests](assets/2010/04/webassertdemonunittests_thumb.png)](assets/2010/04/webassertdemonunittests.png)
+[![WebAssert Demo NUnit Tests](public/assets/2010/04/webassertdemonunittests_thumb.png)](public/assets/2010/04/webassertdemonunittests.png)
 
 One limitation I found was getting enough information about what didn’t validate. Using Fiddler I found that there are no headers in the response describing what the errors or warnings are. So maybe there is a case for adding an HTML parser to the core library so that the validation response can be pulled apart and added to the exception thrown by the Fail method.
 

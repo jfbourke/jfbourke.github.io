@@ -52,16 +52,16 @@ Next we add a PersonController and to that a Create method.
 
 After some other wiring up we run it up and see something like
 
-[![](assets/2010/11/before_clicking_create_thumb.png)](assets/2010/11/before_clicking_create.png)
+[![](public/assets/2010/11/before_clicking_create_thumb.png)](public/assets/2010/11/before_clicking_create.png)
 
 Clicking the Create button will result in
 
-[![](assets/2010/11/required_attribute_thumb.png)](assets/2010/11/required_attribute.png)
+[![](public/assets/2010/11/required_attribute_thumb.png)](public/assets/2010/11/required_attribute.png)
 
 If we now enter some text into the Email field the RegularExpressionAttribute
 we added will kick in and we getting the appropriate error message.
 
-[![](assets/2010/11/regularexpression_attribute_thumb.png)](assets/2010/11/regularexpression_attribute.png)
+[![](public/assets/2010/11/regularexpression_attribute_thumb.png)](public/assets/2010/11/regularexpression_attribute.png)
 
 Now, to follow the DRY principle we should move the regular expression to a
 more descriptive object. So we introduce the EmailAttribute.

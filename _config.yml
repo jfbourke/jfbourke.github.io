@@ -1,37 +1,44 @@
 #
 # Blog Settings
 #
-author: Jonathan Bourke
-description: This is my blog. There are many like it, but this one is mine.
-url: http://bourke.net.nz
-title: Jonathan Bourke
-subtitle: This is my blog. There are many like it, but this one is mine.
+title:						Jonathan Bourke
+tagline:					This is my blog. There are many like it, but this one is mine.
+description:				This is my blog. There are many like it, but this one is mine.
+url:						http://bourke.net.nz
+
+author: 
+  name:						Jonathan Bourke
+  url:						https://twitter.com/jfbourke
+  
 #gravatar_url: 
 #subscribe_rss: 
 
 # Github repositories
-github_user: jfbourke
-github_repo_url: https://github.com/jfbourke/jfbourke.github.io/
+github_user:				jfbourke
+github_repo_url:			https://github.com/jfbourke/jfbourke.github.io/
 
 # Twitter
-twitter_user: jfbourke
-twitter_tweet_button: true
+twitter_user:				jfbourke
+twitter_tweet_button:		true
 
 # Disqus Comments
-disqus_short_name: bourkenetnz
-disqus_show_comment_count: true
+disqus_short_name:			bourkenetnz
+disqus_show_comment_count:	true
 
 # Google Analytics
-google_analytics_tracking_id: UA-15912626-1
+ga_tracking_id:				UA-15912626-1
 
 
 #
 # Jekyll Settings
 #
-markdown: redcarpet
+markdown:		redcarpet
+pygments:		true
 redcarpet:
-  extensions: ["tables"]
-permalink: /archive/:year/:month/:day/:title/
-paginate: 20
-paginate_path: "page/:num"
-category_dir: categories
+  extensions:	["tables"]
+permalink:		/archive/:year/:month/:day/:title/
+paginate:		5
+paginate_path:	"page/:num"
+category_dir:	categories
+
+version:          2.0.0
