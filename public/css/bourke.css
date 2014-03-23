@@ -9,6 +9,22 @@
     font-style: normal;
 }
 
+footer#site-footer {
+	padding: 20px;
+	font-size: 1.25rem;
+}
+
+footer#site-footer p {
+	margin: 0;
+}
+
+footer#site-footer a {
+	color: #9c9fa2;
+}
+
+footer#site-footer a:hover, footer#site-footer a:focus {
+	color: #fff;
+}
 
 div.post-meta {
 	font-family: 'Open Sans', sans-serif;
