@@ -1,0 +1,13 @@
+
+
+##Update records using a CTE##
+
+```
+with mycte as (
+  select id, col1 from table1
+)
+update t2
+set t2.col1 = c.col1
+from table2 t2
+inner join mycte c on t2.id = c.id
+```
