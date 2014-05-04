@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Renaming multiple files in Powershell"
-date: 2014-09-09 +1100
+date: 2014-04-09 +1100
 comments: true
 categories: ['powershell']
 ---
