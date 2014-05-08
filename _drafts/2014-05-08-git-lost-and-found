@@ -1,0 +1,40 @@
+---
+layout: post
+title: "git Lost and Found"
+date: 2014-05-08 +1100
+comments: true
+categories: ['git','branch','fsck','--lost-found']
+---
+
+I got asked a git question the other day and thought I should blog my reply.
+
+>Is it safe to run this? ``git branch -f master origin/master``
+
+To which I replied: Yes, with a but.
+
+##The But?
+Any local commits you have may be orphaned.
+
+##Why?
+What you need to know about that command is that if (and let's assume it does) the branch "master" exists, then 
+the ``-f`` switch will mean that the local branch gets reset to the remote branch, thus removing any local commits.
+
+See the Options section under Branching in the manual, <http://git-scm.com/docs/git-branch>, for more.
+
+##Let's see what I mean
+
+-- example..
+
+##How do you get them back?
+
+```
+git fsck --lost-found
+```
+
+Once you ascertain which commits to reapply, simply merge that commit:
+
+```
+git merge <SHA1>
+```
+
+Done!
