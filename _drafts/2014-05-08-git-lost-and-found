@@ -90,37 +90,42 @@ Where'd the work on ``somebranch`` go?
 
 ##How do you get them back?
 
+First we need to switch back to ``somebranch``. This is very important because if we perform the next steps in 
+``master`` then the history will show that the work was originally done there and not in ``somebranch``.
+
 ```
-E:\_scratch\gitlostfound [master]> git fsck --lost-found
+E:\_scratch\gitlostfound [master]> git checkout somebranch
+Switched to branch 'somebranch'
+E:\_scratch\gitlostfound [somebranch]> git fsck --lost-found
 Checking object directories: 100% (256/256), done.
 dangling commit ef3ce583d09f7b438c06da450f33620043cd2ce6
-E:\_scratch\gitlostfound [master]>
+E:\_scratch\gitlostfound [somebranch]>
 ```
 
 Once you ascertain which commits to reapply, simply merge that commit:
 
 ```
-E:\_scratch\gitlostfound [master]> git merge ef3ce58
+E:\_scratch\gitlostfound [somebranch]> git merge ef3ce58
 Merge made by the 'recursive' strategy.
  fourth.txt | Bin 0 -> 28 bytes
  third.txt  | Bin 0 -> 26 bytes
  2 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 fourth.txt
  create mode 100644 third.txt
-E:\_scratch\gitlostfound [master]> git log --graph --abbrev-commit --decorate --format=format:'%C(bold normal)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-*   9e45311 - Fri, 9 May 2014 10:29:19 +1000 (5 seconds ago) (HEAD, master)
+E:\_scratch\gitlostfound [somebranch]> git log --graph --abbrev-commit --decorate --format=format:'%C(bold normal)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+*   9e45311 - Fri, 9 May 2014 10:29:19 +1000 (5 seconds ago) (HEAD, somebranch)
 |\  ' Merge commit 'ef3ce58' - Jonathan Bourke
 | * ef3ce58 - Fri, 9 May 2014 10:23:09 +1000 (6 minutes ago)
 | | ' Fourth file - Jonathan Bourke
 | * f4203be - Fri, 9 May 2014 10:22:52 +1000 (7 minutes ago)
 | | ' Third file - Jonathan Bourke
-* | 693e3b1 - Fri, 9 May 2014 10:23:52 +1000 (6 minutes ago) (somebranch)
+* | 693e3b1 - Fri, 9 May 2014 10:23:52 +1000 (6 minutes ago) (master)
 |/  ' Fifth file - Jonathan Bourke
 * d986f3b - Fri, 9 May 2014 10:21:02 +1000 (8 minutes ago)
 | ' Second file - Jonathan Bourke
 * b5ee354 - Fri, 9 May 2014 10:19:40 +1000 (10 minutes ago)
   ' First file - Jonathan Bourke
-E:\_scratch\gitlostfound [master]>
+E:\_scratch\gitlostfound [somebranch]>
 ```
 
 Done! Of course this is a very simply example, your mileage may vary.
