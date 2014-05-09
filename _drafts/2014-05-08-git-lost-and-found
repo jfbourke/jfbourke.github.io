@@ -26,7 +26,6 @@ See the Options section under Branching in the manual, <http://git-scm.com/docs/
 ```
 E:\_scratch\gitlostfound> git init
 Initialized empty Git repository in E:/_scratch/gitlostfound/.git/
-E:\_scratch\gitlostfound [master]>
 E:\_scratch\gitlostfound [master]> "first test" | Out-File first.txt
 E:\_scratch\gitlostfound [master]> git add . ; git commit -m "First file"
 [master (root-commit) b5ee354] First file
@@ -56,7 +55,6 @@ E:\_scratch\gitlostfound [master]> git add . ; git commit -m "Fifth file"
 [master 693e3b1] Fifth file
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 fifth.txt
-E:\_scratch\gitlostfound [master]>
 E:\_scratch\gitlostfound [master]> git log --graph --abbrev-commit --decorate --format=format:'%C(bold normal)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 * 693e3b1 - Fri, 9 May 2014 10:23:52 +1000 (65 seconds ago) (HEAD, master)
 | ' Fifth file - Jonathan Bourke
