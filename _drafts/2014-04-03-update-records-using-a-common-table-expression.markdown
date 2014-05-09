@@ -9,7 +9,7 @@ categories: ['cte', 'mssql', 'common', 'table' , 'expression']
 Rather than using a subquery or IN statement I wanted to use a JOIN. Here's how I did it:
 
 ```
-with mycte as (
+;with mycte as (
   select id, col1 from table1
 )
 update t2
@@ -18,4 +18,4 @@ from table2 t2
 inner join mycte c on t2.id = c.id
 ```
 
---todo: explain things a little better
+-- todo: look at distinct rows in cte, if dups what happens?
