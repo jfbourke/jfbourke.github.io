@@ -16,7 +16,7 @@ To which I replied: Yes, with a but.
 Any local commits you have may be orphaned.
 
 ##Why?
-What you need to know about that command is that if (and let's assume it does) the branch "master" exists, then 
+What you need to know about that command is that if (and let's assume it does) the branch ``master`` exists, then 
 the ``-f`` switch will mean that the local branch gets reset to the remote branch, thus removing any local commits.
 
 See the Options section under Branching in the manual, <http://git-scm.com/docs/git-branch>, for more.
