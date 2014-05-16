@@ -13,7 +13,7 @@ I got asked a git question the other day and thought I should blog my reply.
 To which I replied: Yes, with a but.
 
 ##The But?
-Any local commits you have may be orphaned.
+Any local commits you have maybe orphaned.
 
 ##Why?
 What you need to know about that command is that if (and let's assume it does) the branch ``master`` exists, then 
