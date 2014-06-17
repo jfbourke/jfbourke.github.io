@@ -73,3 +73,4 @@ It is possible, thanks to the ``apply`` operator.
 	outer apply dbo.fnGetKids(p.Personid) k
 ```
 
+Here's Rob; http://sqlblog.com/blogs/rob_farley/archive/2011/04/13/the-power-of-t-sql-s-apply-operator.aspx
