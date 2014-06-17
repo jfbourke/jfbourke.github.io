@@ -76,3 +76,5 @@ See MSDN; http://technet.microsoft.com/en-us/library/ms175156(v=SQL.105).aspx
 ```
 
 Here's Rob; http://sqlblog.com/blogs/rob_farley/archive/2011/04/13/the-power-of-t-sql-s-apply-operator.aspx
+
+More; http://explainextended.com/2009/07/16/inner-join-vs-cross-apply/
