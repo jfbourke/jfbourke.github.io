@@ -12,6 +12,8 @@ record returned from another table-valued function, in one statement.
 
 It is possible, thanks to the ``apply`` operator.
 
+See MSDN; http://technet.microsoft.com/en-us/library/ms175156(v=SQL.105).aspx
+
 
 ```
 	use JB;
