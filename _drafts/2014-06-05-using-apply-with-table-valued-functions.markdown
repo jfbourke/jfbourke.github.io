@@ -74,7 +74,7 @@ If we try a simple query where we get all the parents and `cross apply` that wit
 ```
 we will get all records from left side that have records on right, as shown in the screen grab.
 
-[!Cross Apply Result Table](public/assets/2014/06/20140605-using-cross-apply-with-table-valued-functions.png)
+![Cross Apply Result Table](public/assets/2014/06/20140605-using-cross-apply-with-table-valued-functions.png)
 
 With that example in mined. If we now try the same query but instead use `outer apply`...
 
@@ -87,7 +87,7 @@ With that example in mined. If we now try the same query but instead use `outer 
 
 We now get all records from left regardless of whether they have records on right.
 
-[!Outer Apply Result Table](public/assets/2014/06/20140605-using-outer-apply-with-table-valued-functions.png)]
+![Outer Apply Result Table](public/assets/2014/06/20140605-using-outer-apply-with-table-valued-functions.png)
 
 I'm not going to go much more into this as others have written better articles, so here's [Rob](http://sqlblog.com/blogs/rob_farley/archive/2011/04/13/the-power-of-t-sql-s-apply-operator.aspx
 ).
