@@ -10,12 +10,11 @@ categories: ['mssql', 'apply', 'cross apply', 'outer apply', 'table-valued funct
 So I got asked the other day whether it was possible to call a table-valued function for each 
 record returned from another table-valued function, in one statement. 
 
-It is possible, thanks to the ``apply`` operator.
+It is possible, thanks to the ``apply`` operator - see [MSDN](http://technet.microsoft.com/en-us/library/ms175156\(v=SQL.105\).aspx) for more.
 
-See MSDN; http://technet.microsoft.com/en-us/library/ms175156(v=SQL.105).aspx
+So if we take a contrived example of a parent with children.
 
-
-```
+```sql
 	use JB;
 
 	IF OBJECT_ID (N'dbo.fnGetParent', N'TF') IS NOT NULL
@@ -63,18 +62,33 @@ See MSDN; http://technet.microsoft.com/en-us/library/ms175156(v=SQL.105).aspx
 		return
 	end;
 	go
+```
 
-	-- get records from left side that have records on right = inner join?
+If we try a simple query where we get all the parents and `cross apply` that with children...
+
+```sql
+	-- 
 	select p.PersonId, p.FirstName, k.FirstName, k.ParentId
 	from dbo.fnGetParent() p
 	cross apply dbo.fnGetKids(p.Personid) k
+```
+we will get all records from left side that have records on right, as shown in the screen grab.
 
-	-- get records from left regardless of whether they have records on right = left join?
+[!Cross Apply Result Table](public/assets/2014/06/20140605-using-cross-apply-with-table-valued-functions.png)
+
+With that example in mined. If we now try the same query but instead use `outer apply`...
+
+```sql
+	-- 
 	select p.PersonId, p.FirstName, k.FirstName, k.ParentId
 	from dbo.fnGetParent() p
 	outer apply dbo.fnGetKids(p.Personid) k
 ```
 
-Here's Rob; http://sqlblog.com/blogs/rob_farley/archive/2011/04/13/the-power-of-t-sql-s-apply-operator.aspx
+We now get all records from left regardless of whether they have records on right.
 
-More; http://explainextended.com/2009/07/16/inner-join-vs-cross-apply/
+[!Outer Apply Result Table](public/assets/2014/06/20140605-using-outer-apply-with-table-valued-functions.png)]
+
+I'm not going to go much more into this as others have written better articles, so here's [Rob](http://sqlblog.com/blogs/rob_farley/archive/2011/04/13/the-power-of-t-sql-s-apply-operator.aspx
+).
+
