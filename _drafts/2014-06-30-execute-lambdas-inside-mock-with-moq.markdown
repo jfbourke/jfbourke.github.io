@@ -11,7 +11,8 @@ that is passed to it.
 
 It is, here's how;
 
-First a simple class that has a dependency, you could image that the dependency is some sort of cache provider.
+First a simple class that has a dependency, you could image that the dependency is some sort of cache provider 
+that only calls our lambda when no data is present.
 
 ```
 public class MyClass
