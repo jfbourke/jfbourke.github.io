@@ -3,13 +3,14 @@ layout: post
 title: "XQuery fun with text node selector"
 date: 2014-11-14 +1100
 comments: true
-categories: ['xquery', 'text', 'text node', 'selector']
+categories: ['xquery', 'text', 'text node', 'selector', 'mssql']
 ---
 
 I came across a puzzling bug this morning regarding node selection using the `text()` selector.
 
+Here's an example of the problem, note its contrived and is only used to help highlight the behaviour that we are observing. Take the following snippet of XML, say we want to grab the first `region` value.
+
 ```
-<xml>
 <person>
   <addresses>
     <address>
@@ -29,17 +30,20 @@ I came across a puzzling bug this morning regarding node selection using the `te
 
 ```
 
-Here's the query
+Here's a query that would do it using the `text()` selector (I know there's other ways but bear with me);
 
 ```
-/person/addresses/address/region/text()[1]
+//person/addresses/address/region/text()
 ```
 
-When you think about it `text()` will return text nodes, if the node is not defined then it will not return. 
-It'd be nice if there was a `bool` argument that you could pass that would include `nil` nodes.
+You'll find that the result is not what you might expect, in our case we want an empty string or at worst a `null`. However what you get is `somewhere`! Oh snap!
 
-Anyway, the correct way to perform the same query is to pull the node before obtaining the text. Like so;
+What's going on? Well the `text()` selector will return text nodes, if the node is not defined then it will not return it. Makes sense when you think about it however it'd be nice if there was a `bool` argument that you could pass that would include `nil` nodes.
+
+Anyway, a better way to perform the query would be to pull the node before obtaining the text. Like so;
 
 ```
-/person/addresses/address/region[1]/text()[1]
+//person/addresses/address/region[1]/text()
 ```
+
+The point of this post is that you should be aware of how selectors work so that you do not return the wrong value. 
