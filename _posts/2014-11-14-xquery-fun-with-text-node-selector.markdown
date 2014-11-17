@@ -10,7 +10,7 @@ I came across a puzzling bug this morning using the `text()` node selector.
 
 Here's an example of the problem, note its contrived and is only used to help highlight the behaviour that we are observing. Take the following snippet of XML, say we want to grab the first `region` value.
 
-```
+```xml
 <person>
   <addresses>
     <address>
