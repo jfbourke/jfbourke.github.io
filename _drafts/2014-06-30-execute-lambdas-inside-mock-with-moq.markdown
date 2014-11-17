@@ -11,8 +11,7 @@ that is passed to it.
 
 It is, here's how;
 
-First a simple class that has a dependency, you could image that the dependency is some sort of cache provider 
-that only calls our lambda when no data is present.
+Take the following class, you could imagine that the dependency is some sort of business process that will crunch the data returned from the lambda. This is a contrived example and you could do the same thing without the lambda. The main take away is to show how to mock a dependency and still have the lambda from the calling class consumed. 
 
 ```
 public class MyClass
@@ -24,7 +23,7 @@ public class MyClass
   }
   
   public IEnumerable<MyOtherClass> GetOtherClasses() {
-    return dependency.GetOrPut(LoadData);
+    return dependency.RunSomeProcess(LoadData);
   }
   
   private IEnumerable<MyOtherClass> LoadData() {
@@ -40,7 +39,7 @@ Now the Moq setup
 
 ```
 var mockDependency = new Mock<IDependency>()
-  .Setup(m => m.GetOrPut(It.IsAny<Func<IEnumerable<MyOtherClass>>>))
+  .Setup(m => m.RunSomeProcess(It.IsAny<Func<IEnumerable<MyOtherClass>>>))
   .Returns((IEnumerable<MyOtherClass> callback) => callback());
 ```
 
