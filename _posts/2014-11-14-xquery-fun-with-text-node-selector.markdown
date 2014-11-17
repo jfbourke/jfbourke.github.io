@@ -32,7 +32,7 @@ Here's an example of the problem, note its contrived and is only used to help hi
 
 Here's a XQuery that would do it using the `text()` node selector (I know there's other ways but bear with me);
 
-```
+```xquery
 //person/addresses/address/region/text()
 ```
 
@@ -42,7 +42,7 @@ What's going on? Well the `text()` node selector returns text nodes, if the node
 
 Anyway, a better way to perform the query would be to pull the node before obtaining the text. Like so;
 
-```
+```xquery
 //person/addresses/address/region[1]/text()
 ```
 
