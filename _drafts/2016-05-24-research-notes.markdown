@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Research notes"
+date: 2016-05-20 +1100
+comments: false
+categories: ['idesign']
+---
 
-
-https://www.youtube.com/channel/UCafkV40656nWz9Jc129ZCFA
+Graham Gibbs; https://www.youtube.com/channel/UCafkV40656nWz9Jc129ZCFA
