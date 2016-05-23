@@ -14,3 +14,5 @@ XLStat; https://help.xlstat.com/?b_id=9283
 
 Distributions
 Kurtosis; https://en.wikipedia.org/wiki/Kurtosis#Kurtosis_of_well-known_distributions
+
+5S (methodology); https://en.wikipedia.org/wiki/5S_(methodology)
