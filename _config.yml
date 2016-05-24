@@ -33,7 +33,7 @@ ga_tracking_id: UA-15912626-1
 # Jekyll Settings
 #
 markdown: kramdown
-pygments: true
+highlighter: rouge
 permalink: /archive/:year/:month/:day/:title/
 paginate: 5
 paginate_path: "page/:num"
