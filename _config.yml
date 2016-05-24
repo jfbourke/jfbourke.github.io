@@ -32,10 +32,8 @@ ga_tracking_id: UA-15912626-1
 #
 # Jekyll Settings
 #
-markdown: redcarpet
+markdown: kramdown
 pygments: true
-redcarpet: 
-  extensions: ["tables"]
 permalink: /archive/:year/:month/:day/:title/
 paginate: 5
 paginate_path: "page/:num"
