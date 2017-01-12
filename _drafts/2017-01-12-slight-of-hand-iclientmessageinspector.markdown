@@ -51,6 +51,7 @@ Recently I had the need to implement generic code that could take an XML message
             {
                 request.WriteMessage(writer);
                 writer.Flush();
+                ms.Position = 0;
             }
 
             var doc = new XmlDocument();
